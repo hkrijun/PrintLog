@@ -1,0 +1,39 @@
+# DateFormat=dd-mm-yyyy
+# Notes=Note, Mirror, Perimeter, Perimeters, Bed, SolidInfillThr
+# +UPDATE
+# PrinterFile|ComputerFile|UploadDate|Notes
+ef_test:test-entry:25-2-2017
++UPDATE:Profile=WOH-test-Fan|Max_Arc_Length=0.5->0.125|PrinterFan=Enabled
+sh_2p15:spool_holder_000-B4_Lanka_tuki_2:25-1-2017
+ef_v1p2:extruder_overhang_fans_001-B2_Oikea_runkoon_yla:24-1-2017
+ef_v1p1:extruder_overhang_fans_001-B2_Oikea_runkoon_ala:4-12-2016
+ef_v1p1:extruder_overhang_fans_001-B2_Oikea_runkoon_ala:3-12-2016
+rm_v1p8:audioliitin_001-B2_Naaras_yla:27-11-2016
+rm_v2p7:audioliitin-testi_3:27-11-2016
++UPDATE:Profile=WOH-test
+rm_v1p7:audioliitin-testi_2:27-11-2016
++UPDATE:Profile=WOH-0.1mm
+rm_v1p6:audioliitin-testi_1:21-11-2016:Perimeter=0.5|Perimeters=3|Notes=Sopivuus kokeilu
+rm_v1p5:mikki-B4_Vedon:19-11-2016:Perimeter=0.5|Perimeters=3
++UPDATE:Bed=65,60
+rm_v1p4:mikki-B3_Ulkopuoli:12-11-2016:Perimeter=0.5|Perimeters=3|Bed=65,60
+rm_v1p3:mikki-B2_Kuuloke:12-11-2016:Perimeter=0.5|Perimeters=3|Bed=65,60
+rm_v1p2:mikki-B5_Liitin_kopio:12-11-2016:Perimeter=0.5
+rm_v1p1:mikki-B5_Liitin:11-11-2016:Perimeter=0.58
+sh_1p15:spool_holder_000-B4_Lanka_tuki:18-10-2016:Perimeter=0.58
+sh_v3p3:spool_holder_000-B5_Tankojen_tuet_ylapaaty_vasen:14-10-2016:Perimeter=0.58|Mirror=X
+sh_3p12:spool_holder_000-B5_Tankojen_tuet_ylapaaty:13-10-2016:Perimeter=0.58
+sh_1p14:spool_holder_000-B3_Spool_Yla:12-10-2016:Perimeter=0.58
+sh_2p13:spool_holder_000-B3_Kiinnike_Yla_v2:11-10-2016:Note=Uusi versio
+sh_2p12:spool_holder_000-B5_Tankojen_tuet_ylapaaty:10-10-2016:Mirror=X
+sh_2p11:spool_holder_000-B5_Kiinnike_Ala_v2_2p:10-10-2016
+sh_1p10:spool_holder_000-B3_Spool_Yla_001:9-10-2016
+sh_v1p9:spool_holder_000-B3_Spool_Top:9-10-2016
+sh_v1p8:spool_holder_000-B3_Spool_Adapter_Lower:8-10-2016
+sh_v1p7:spool_holder_000-B3_Spool_Ala:8-10-2016
+sh_v1p6:spool_holder_000-B3_Spool_Ala_Runko:6-10-2016
+sh_v1p5:spool_holder_000-B3_Stabilizer:4-10-2016
+sh_v1p4:spool_holder_000-B5_Tankojen_tuet_yla_001:4-10-2016:Perimeter=0.58
+sh_v1p3:spool_holder_000-B5_Tankojen_tuet_yla_000:3-10-2016
+sh_v1p2:spool_holder_000-B3_Kiinnike_Yla:3-10-2016
+sh_v1p1:spool_holder_000-B3_Kiinnike_Ala:2-10-2016

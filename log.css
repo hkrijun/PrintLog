@@ -1,0 +1,291 @@
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+@font-face {
+	font-family: 'Open Sans Light';
+	font-style: normal;
+	font-weight: 300;
+	src: local("Open Sans Light"), local("OpenSans-Light"), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+
+
+/* -- Boostrap overrides -- */
+
+
+.form-control {
+	color: #9ba6c7;
+	background-color: #1a2a31;
+	border-color: #1c2f37;
+	box-shadow: 0 2px 5px rgba(255,255,255, 0.0125) inset;
+}
+
+.form-control::-moz-placeholder {
+	color: #3f5158;
+}
+
+.dropdown-menu {
+	background-color: #181e20;
+}
+
+.btn-remove {
+	background-color: red;
+	border-radius: 50%;
+}
+
+
+/* -- Style -- */
+
+
+.main_box {
+	background-color: #253034;
+}
+
+.dark_box {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 15%;
+	width: 25%;
+	background-color: #202628;
+}
+
+body {
+	background-color: #181e20;
+	color: #97a6ac;
+	font-family: "Open Sans Light";
+	font-size: 1.6em;
+}
+
+.header {
+	padding: 5px 20px 5px 20px;
+	white-space: nowrap;
+}
+
+.header .row {
+	margin-bottom: 0;
+}
+
+.header .row > div {
+	padding: 0 5px !important;
+}
+
+.header .settings {
+	white-space: normal;
+}
+
+.header .settings .setting {
+	padding: 4px;
+	float: left;
+	cursor: pointer;
+}
+
+#entry_input_new_setting {
+	padding: 3px 5px;
+	line-height: 1;
+}
+
+.header .settings .form-inline {
+	clear: left;
+	padding: 0 4px;
+}
+
+.header .settings .dropdown {
+	float: left;
+}
+
+.log_lines {
+	background-color: #21292c;
+	padding: 10px 20px 10px 20px;
+	min-height: 500px;
+	position: relative;
+}
+
+.log_lines .row.sub_header > div {
+	padding-left: 8.333333%;
+	margin-left: -85px;
+}
+
+.log_lines .sub_header > div > div {
+	display: inline-block;
+	padding: 0 0 0 5px;
+	font-size: 0.8em;
+	vertical-align: 2px;
+}
+
+.log_lines .sub_header > div > div > span:first-of-type {
+	padding: 2px 5px;
+	background-color: #1b3023;
+	color: #377950;
+	border-radius: 5px 0 0 5px;
+	border-left-width: 1px;
+}
+
+.log_lines .sub_header > div > div > span {
+	padding: 2px 0 2px 4px;
+	background-color: #172b1e;
+	color: #355444;
+	border: 1px solid #22382a;
+	border-width: 1px 0 1px 0;
+}
+
+.log_lines .sub_header > div > div > span:not(:first-of-type):not(:last-of-type) {
+	position: relative;
+}
+
+.log_lines .sub_header > div > div > span:not(:first-of-type):not(:last-of-type):after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: transparent;
+	border-left-color: #172b1e;
+	border-width: 0.7em;
+	margin-top: -0.6em;
+}
+
+.log_lines .sub_header > div > div > span:last-of-type {
+	padding: 2px 8px;
+	background-color: #183523;
+	color: #738674;
+	border-radius: 0 5px 5px 0;
+	border-right-width: 1px;
+}
+
+.log_lines .entry {
+	position: relative;
+}
+
+.log_lines .entry:hover {
+	cursor: pointer;
+}
+
+.log_lines .entry:hover::before {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(0,0,0, 0.1);
+	border-radius: 10px;
+}
+
+.log_lines .entry > div {
+	position: relative;
+}
+
+.log_lines .entry > div > span {
+	background-color: #253034;
+	position: absolute;
+	top: 7px;
+	bottom: 7px;
+	left: 0px;
+	right: 0px;
+	z-index: 0;
+}
+
+.log_lines .entry > div > div {
+	padding: 10px 10px;
+	position: relative;
+	z-index: 1;
+}
+
+.log_lines .entry .date {
+	direction: rtl;
+	color: #434f53;
+	display: flex;
+	align-items: center;
+}
+
+.log_lines .entry .date > span {
+	display: none;
+}
+
+.log_lines .entry .date > div {
+	border: 1px solid #14191b;
+	border-right: 0;
+	text-align: right;
+	font-size: 0.7em;
+	font-weight: bolder;
+	vertical-align: middle;
+	background-color: #181e20;
+	padding: 3px 5px 3px 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.log_lines .entry .short_file {
+	display: flex;
+	align-items: center;
+}
+
+.log_lines .entry .short_file > span {
+
+}
+	
+.log_lines .entry .short_file > div {
+
+}
+	
+.log_lines .entry .file > span {
+	background-color: #2b3539;
+}
+
+.log_lines .entry .settings {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 7px 0;
+}
+
+.log_lines .entry .settings > span {
+	display: none;
+}
+
+.log_lines .entry .settings > div {
+	background-color: #253034;
+	border-radius: 0 7px 7px 0;
+	padding: 0 5px;
+	flex: 1 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.log_lines .entry .settings > div > div, .settings .setting {
+	display: inline-block;
+	padding: 0 5px;
+	font-size: 0.8em;
+}
+
+.log_lines .entry .settings > div > div > span:first-of-type, .settings .setting span:first-of-type  {
+	display: inline-block;
+	padding: 1px 3px;
+	background-color: #1d424f;
+	border-radius: 3px 0 0 3px;
+}
+
+.log_lines .entry .settings > div > div > span:last-of-type, .settings .setting span:last-of-type {
+	display: inline-block;
+	padding: 1px 8px;
+	background-color: #233b48;
+	border-radius: 0 3px 3px 0;
+}
