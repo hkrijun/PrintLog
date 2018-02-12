@@ -1,3 +1,5 @@
+/* -- "Hacks" -- */
+
 .row.no-gutters {
 	margin-right: 0;
 	margin-left: 0;
@@ -23,6 +25,10 @@
 	src: local("Open Sans Light"), local("OpenSans-Light"), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
 }
 
+.centered {
+	text-align: center;
+}
+
 
 /* -- Boostrap overrides -- */
 
@@ -32,10 +38,18 @@
 	background-color: #1a2a31;
 	border-color: #1c2f37;
 	box-shadow: 0 2px 5px rgba(255,255,255, 0.0125) inset;
+	padding: 0;
 }
 
 .form-control::-moz-placeholder {
 	color: #3f5158;
+}
+
+.input-sm, .btn-sm {
+	line-height: 18px;
+	height: initial;
+	padding: 0px 5px;
+	margin: 4px;
 }
 
 .dropdown-menu {
@@ -47,6 +61,10 @@
 	border-radius: 50%;
 }
 
+.btn-xs {
+	line-height: 1.2;
+}
+
 
 /* -- Style -- */
 
@@ -55,7 +73,7 @@
 	background-color: #253034;
 }
 
-.dark_box {
+.dark_box { /* 13191b 202628 */
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -68,7 +86,7 @@ body {
 	background-color: #181e20;
 	color: #97a6ac;
 	font-family: "Open Sans Light";
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 .header {
@@ -89,7 +107,7 @@ body {
 }
 
 .header .settings .setting {
-	padding: 4px;
+	padding: 5px;
 	float: left;
 	cursor: pointer;
 }
@@ -101,33 +119,61 @@ body {
 
 .header .settings .form-inline {
 	clear: left;
-	padding: 0 4px;
+	padding: 0 8px;
 }
 
 .header .settings .dropdown {
 	float: left;
 }
 
-.log_lines {
+.input_container {
+	display: flex;
+}
+
+#entry_input_settingsKey {
+	width: 100%;
+	margin-left: 0px;
+}
+
+#entry_input_settingsValue {
+	flex: 1 0;
+	margin-left: 0px;
+}
+
+#entry_input_settingsAdd {
+	flex: 1 0;
+	min-width: 61px;
+	margin-right: 0px;
+}
+
+.log_lines { /* 21292c 151b1d */
 	background-color: #21292c;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 20px 0px 20px;
 	min-height: 500px;
 	position: relative;
 }
 
-.log_lines .row.sub_header > div {
-	padding-left: 8.333333%;
-	margin-left: -85px;
+.log_lines .row {
+	position: relative;
+	z-index: 1;
 }
 
-.log_lines .sub_header > div > div {
+.log_lines .row.sub_header_container > div {
+	padding-left: 16.666666%;
+	margin-left: -175px;
+	color: #747362;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.log_lines .sub_header_container > div > div {
 	display: inline-block;
 	padding: 0 0 0 5px;
 	font-size: 0.8em;
 	vertical-align: 2px;
 }
 
-.log_lines .sub_header > div > div > span:first-of-type {
+.log_lines .sub_header_container > div > div > span:first-of-type {
 	padding: 2px 5px;
 	background-color: #1b3023;
 	color: #377950;
@@ -135,7 +181,7 @@ body {
 	border-left-width: 1px;
 }
 
-.log_lines .sub_header > div > div > span {
+.log_lines .sub_header_container > div > div > span {
 	padding: 2px 0 2px 4px;
 	background-color: #172b1e;
 	color: #355444;
@@ -143,11 +189,11 @@ body {
 	border-width: 1px 0 1px 0;
 }
 
-.log_lines .sub_header > div > div > span:not(:first-of-type):not(:last-of-type) {
+.log_lines .sub_header_container > div > div > span:not(:first-of-type):not(:last-of-type) {
 	position: relative;
 }
 
-.log_lines .sub_header > div > div > span:not(:first-of-type):not(:last-of-type):after {
+.log_lines .sub_header_container > div > div > span:not(:first-of-type):not(:last-of-type):after {
 	left: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -162,7 +208,7 @@ body {
 	margin-top: -0.6em;
 }
 
-.log_lines .sub_header > div > div > span:last-of-type {
+.log_lines .sub_header_container > div > div > span:last-of-type {
 	padding: 2px 8px;
 	background-color: #183523;
 	color: #738674;
@@ -194,22 +240,26 @@ body {
 }
 
 .log_lines .entry > div > span {
-	background-color: #253034;
 	position: absolute;
-	top: 7px;
-	bottom: 7px;
+	top: 0px;
+	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	z-index: 0;
+	border-bottom: 1px dashed #082b3c;
 }
 
-.log_lines .entry > div > div {
-	padding: 10px 10px;
+.entry_val {
+	padding: 3px 10px;
 	position: relative;
 	z-index: 1;
 }
 
-.log_lines .entry .date {
+.abs-col {
+	position: absolute !important;
+}
+
+.entry .date {
 	direction: rtl;
 	color: #434f53;
 	display: flex;
@@ -220,16 +270,14 @@ body {
 	display: none;
 }
 
-.log_lines .entry .date > div {
-	border: 1px solid #14191b;
-	border-right: 0;
-	text-align: right;
-	font-size: 0.7em;
-	font-weight: bolder;
-	vertical-align: middle;
-	background-color: #181e20;
-	padding: 3px 5px 3px 5px;
-	border-radius: 5px 0 0 5px;
+.entry_val.date_val {
+	margin-right: 75px;
+	background-color: #1e3042;
+	font-size: 0.8em;
+	line-height: 1.7;
+	font-weight: bolder;vertical-align: middle;
+	padding: 0 5px 0 5px;
+	right: -100%;
 }
 
 .log_lines .entry .short_file {
@@ -237,55 +285,181 @@ body {
 	align-items: center;
 }
 
-.log_lines .entry .short_file > span {
-
+.nth_odd .short_file_bg {
+	background-color: #1b3956;
 }
-	
-.log_lines .entry .short_file > div {
 
+.nth_even .short_file_bg {
+	background-color: #113850;
 }
-	
-.log_lines .entry .file > span {
-	background-color: #2b3539;
+
+.nth_first .short_file_bg {
+	border-top-left-radius: 5px;
+}
+
+.nth_last .short_file_bg {
+	border-bottom-left-radius: 5px;
+}
+
+.short_file_bg {
+	left: auto !important;
+	max-width: 100px;
+	width: 100%;
+}
+
+.short_file_val {
+	color: #5e8590;
+	width: 100%;
+	text-align: right;
+}
+
+.nth_odd .file_val {
+	color: #465964;
+}
+
+.nth_even .file_val {
+	color: #3c586b;
+}
+
+.log_lines .entry.nth_even .file > span {
+	background-color: #101f26;
+}
+
+.log_lines .entry.nth_odd .file > span {
+	background-color: #122129;
+}
+
+.nth_first .settings_bg {
+	border-top-right-radius: 5px;
+}
+
+.nth_last .settings_bg {
+	border-bottom-right-radius: 5px;
 }
 
 .log_lines .entry .settings {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 7px 0;
+	padding: 0;
 }
 
-.log_lines .entry .settings > span {
-	display: none;
+.nth_even .settings_bg {
+	background: #101f26;
+	background: -moz-linear-gradient(left,  #101f26 0%, #131c20 100%);
+	background: -webkit-linear-gradient(left,  #101f26 0%,#131c20 100%);
+	background: linear-gradient(to right,  #101f26 0%,#131c20 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101f26', endColorstr='#131c20',GradientType=1 );
+}
+
+.nth_odd .settings_bg {
+	background: #122129;
+	background: -moz-linear-gradient(left,  #122129 0%, #111c22 25%, #0f171a 100%);
+	background: -webkit-linear-gradient(left,  #122129 0%,#111c22 25%,#0f171a 100%);
+	background: linear-gradient(to right,  #122129 0%,#111c22 25%,#0f171a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#122129', endColorstr='#0f171a',GradientType=1 );
 }
 
 .log_lines .entry .settings > div {
-	background-color: #253034;
-	border-radius: 0 7px 7px 0;
-	padding: 0 5px;
+	padding: 0;
 	flex: 1 0;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.log_lines .entry .settings > div > div, .settings .setting {
+.log_lines .entry .settings > div > div,
+.settings .setting {
 	display: inline-block;
 	padding: 0 5px;
-	font-size: 0.8em;
+	font-size: 0.9em;
+	line-height: 1.2;
 }
 
-.log_lines .entry .settings > div > div > span:first-of-type, .settings .setting span:first-of-type  {
+.log_lines .entry .settings > div > div > span:first-of-type,
+.settings .setting span:first-of-type
+{
 	display: inline-block;
-	padding: 1px 3px;
+	padding: 2px 3px 3px 3px;
 	background-color: #1d424f;
 	border-radius: 3px 0 0 3px;
 }
 
-.log_lines .entry .settings > div > div > span:last-of-type, .settings .setting span:last-of-type {
+.log_lines .entry .settings > div > div > span:last-of-type,
+.settings .setting span:last-of-type
+{
 	display: inline-block;
-	padding: 1px 8px;
+	padding: 2px 8px 3px;
 	background-color: #233b48;
 	border-radius: 0 3px 3px 0;
 }
+
+.sub_item_val {
+	color: #6a787f;
+}
+
+/*** Pagination ***/
+
+.align_right {
+	text-align: right;
+}
+
+.pagination {
+	color: #454e54;
+	margin: 10px 0 -20px 0
+}
+
+.pagination .active .pagination_no {
+	background-color: #094c65;
+	border-color: #0b5a75;
+	color: #a3bedf;
+}
+
+.pagination .pagination_no {
+	border: 1px solid #0a3b4d;
+	background-color: #0d3645;
+	color: #89acb9;
+}
+
+.entries {
+	float: right;
+	color: #747362;
+	font-size: 0.9em;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
