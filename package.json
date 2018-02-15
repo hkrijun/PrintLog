@@ -1,0 +1,15 @@
+{
+    "name": "printlog",
+    "title": "PrintLog",
+    "version": "0.0.1-testing",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-concat": "*"
+    },
+
+    "scripts": {
+        "build": "npm install && grunt"
+    }
+}

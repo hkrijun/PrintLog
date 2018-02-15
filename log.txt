@@ -13,7 +13,7 @@ rm_v2p7:audioliitin-testi_3:27-11-2016
 +UPDATE:Profile=WOH-test
 rm_v1p7:audioliitin-testi_2:27-11-2016
 +UPDATE:Profile=WOH-0.1mm
-rm_v1p6:audioliitin-testi_1:21-11-2016:Perimeter=0.5|Perimeters=3|Notes=Sopivuus kokeilu
+rm_v1p6:audioliitin-testi_1:21-11-2016:Perimeter=0.5|Perimeters=3|Notes=Sopivuuskokeilu
 rm_v1p5:mikki-B4_Vedon:19-11-2016:Perimeter=0.5|Perimeters=3
 +UPDATE:Bed=65,60
 rm_v1p4:mikki-B3_Ulkopuoli:12-11-2016:Perimeter=0.5|Perimeters=3|Bed=65,60
