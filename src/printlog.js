@@ -52,10 +52,6 @@ function DateToString(_date, _format) {
     return _format.replace("yyyy", _date.getFullYear()).replace("mm", mm).replace("dd", dd);
 }
 
-function IsDefined(objToCheck) {
-    return typeof objToCheck !== 'undefined';
-}
-
 // -- String-class additions
 
 String.prototype.splice = function(start, delCount, newSubStr) {
@@ -68,6 +64,12 @@ String.prototype.insert = function(index, string) {
     else
         return string + this;
 };
+
+// -- Shorthands
+
+function IsDefined(objToCheck) {
+    return typeof objToCheck !== 'undefined';
+}
 
 // -- Variables
 
@@ -119,6 +121,8 @@ $(document).ready(function() {
     ui.entry_input_settings_dropdown.on("hide.bs.dropdown", function() {
         ui.entry_input_add_settings.html("Add <span class=\"glyphicon glyphicon-triangle-bottom\"></span>");
     });
+
+    // Button events
 
     ui.entry_input_add_settings.on("click", function() {
         ui.entry_input_settingsKey.val("");
