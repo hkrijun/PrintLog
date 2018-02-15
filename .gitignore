@@ -1,6 +1,6 @@
 .git/
 .vscode/
-img/*.psd
-img/design.psd
+img/
+!img/printlog_design_v2.png
 node_modules/
 npm-debug.log

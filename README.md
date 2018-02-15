@@ -13,11 +13,11 @@ Reads a log file with notes of prints and lays it on to a webpage for easier rea
 
 ## Build
 
-Just run Grunt with default profile.
+Just run Grunt with default profile:
 ```
 grunt
 ```
 
 ### Language & Tools
 * [Bootstrap 3.3.7](https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css) for responsive layout
-* [jQuery 3.3.1](https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js) for Bootstrap and general use
+* [jQuery 3.3.1](https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js) for general use
